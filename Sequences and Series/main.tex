@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Introduction to\\Sequences and Series\\Course\\}
+\author{Tutoring Centre Ferndale\\
+\includegraphics[width=4em]{ApS_logo.png}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+Sequences and series are powerful tools in mathematics, allowing us to model and analyze patterns and sums in various contexts. By understanding the formulas and methods for deriving terms and sums, we can apply these concepts to solve real-world problems.
+
+\section*{Sequences}
+
+A \textbf{sequence} is an ordered list of numbers.
+
+Each number in the sequence is called a \textbf{term}.
+
+Sequences can be finite or infinite. For example, the sequence of even numbers: \(2, 4, 6, 8, \ldots\) is infinite, while \(1, 3, 5\) is a finite sequence.
+
+Three dots following an a sequence \ldots is called an ellipsis. In an English sentence it indicates that part of a sentence has been left out. After a sequence it indicates that the sequence continues forever. An infinite sequence is ended with an ellipsis.
+
+A full stop (also called a period) following a sequence indicates that the sequence ends there. A finite sequence is ended with a full stop.\\
+
+\textbf{Question:}
+
+1. Identify whether the following sequences are finite or infinite:
+   \begin{itemize}
+       \item \(5, 10, 15, 20, \ldots\)
+       \item \(8, 16, 24, 32\)
+   \end{itemize}
+
+\newpage
+
+\section*{Series}
+
+A \textbf{series} is the sum of the terms of a sequence. If \(a_1, a_2, a_3, \ldots, a_n\) is a sequence, then the series is written as \(a_1 + a_2 + a_3 + \ldots + a_n\). For an infinite sequence, the series continues indefinitely.\\
+
+\textbf{Question:}
+
+2. Write the series for the first 5 terms of the sequence \(2, 4, 6, 8, 10\).
+
+\section*{Examples}
+
+\subsection*{Arithmetic Sequences}
+
+An \textbf{arithmetic sequence} is a sequence in which the difference between consecutive terms is constant. This difference is called the \textbf{common difference} (\(d\)).
+
+\textbf{Example:}
+
+The sequence \(3, 7, 11, 15, \ldots\) is an arithmetic sequence with a common difference of 4.\\
+
+\textbf{Questions:}
+
+3. Determine the common difference for the arithmetic sequence \(5, 9, 13, 17, \ldots\).
+
+4. Find the 6th term of the arithmetic sequence \(2, 5, 8, 11, \ldots\).
+
+\subsection*{Geometric Sequences}
+
+A \textbf{geometric sequence} is a sequence in which each term after the first is found by multiplying the previous term by a fixed, non-zero number called the \textbf{common ratio} (\(r\)).
+
+\textbf{Example:}
+
+The sequence \(2, 6, 18, 54, \ldots\) is a geometric sequence with a common ratio of 3.\\
+
+\textbf{Questions:}
+
+5. Identify the common ratio for the geometric sequence \(4, 12, 36, 108, \ldots\).
+
+6. Find the 4th term of the geometric sequence \(5, 15, 45, \ldots\).
+
+\newpage
+
+\subsection*{Sigma Notation}
+
+\textbf{Sigma notation} is a concise way of writing the sum of a series. The Greek letter sigma \(\Sigma\) is used to represent the sum. The general form of sigma notation is:
+\[
+\sum_{i=m}^{n} a_i
+\]
+where \(i\) is the \textbf{index of summation}, \(m\) is the lower limit, \(n\) is the upper limit, and \(a_i\) represents the terms of the sequence. 
+
+The \textbf{index of summation} \(i\) is a variable that represents the position of each term in the sequence. It starts at the lower limit \(m\) and increases by 1 each step until it reaches the upper limit \(n\). For each value of \(i\), \(a_i\) specifies the corresponding term in the sequence that is included in the sum.
+
+\textbf{Example:}
+
+The sum of the first 5 terms of the arithmetic sequence \(2, 4, 6, 8, 10\) can be written as:
+\[
+\sum_{i=1}^{5} 2i
+\]
+This represents \(2 \times 1 + 2 \times 2 + 2 \times 3 + 2 \times 4 + 2 \times 5\).\\
+
+\textbf{Example:}
+
+The sum of the first 4 terms of the geometric sequence \(3, 9, 27, 81\) with a common ratio of 3 can be written as:
+\[
+\sum_{i=0}^{3} 3^{i+1}
+\]
+This represents \(3^1 + 3^2 + 3^3 + 3^4\).\\
+
+\textbf{Questions:}
+
+7. Write the series for the sum of the first 6 terms of the sequence \(1, 4, 7, 10, 13, 16\) using sigma notation.
+
+8. Express the sum of the first 5 terms of the sequence \(2, 6, 18, 54, 162\) using sigma notation.
+
+\newpage
+
+\section*{Deriving Formulas}
+
+\subsection*{Arithmetic Sequence Formula}
+
+The \(n\)-th term of an arithmetic sequence can be found using the formula:
+\[
+a_n = a_1 + (n-1)d
+\]
+where \(a_1\) is the first term, \(d\) is the common difference, and \(n\) is the term number.
+
+\textbf{Example:}
+
+For the arithmetic sequence \(3, 7, 11, 15, \ldots\), to find the 10th term:
+\[
+a_{10} = 3 + (10-1) \times 4 = 3 + 36 = 39
+\]
+
+\textbf{Questions:}
+
+9. Find the 15th term of the arithmetic sequence \(5, 10, 15, 20, \ldots\).
+
+10. Given the arithmetic sequence \(12, 17, 22, 27, \ldots\), determine the 7th term.
+
+\subsection*{Geometric Sequence Formula}
+
+The \(n\)-th term of a geometric sequence can be found using the formula:
+\[
+a_n = a_1 \times r^{(n-1)}
+\]
+where \(a_1\) is the first term, \(r\) is the common ratio, and \(n\) is the term number.
+
+\textbf{Example:}
+
+For the geometric sequence \(2, 6, 18, 54, \ldots\), to find the 5th term:
+\[
+a_5 = 2 \times 3^{(5-1)} = 2 \times 3^4 = 2 \times 81 = 162
+\]
+
+\textbf{Questions:}
+
+11. Find the 6th term of the geometric sequence \(3, 9, 27, \ldots\).
+
+12. Given the geometric sequence \(7, 21, 63, 189, \ldots\), determine the 4th term.
+
+\newpage
+
+\section*{Real-life Examples}
+
+\subsection*{Savings Account}
+
+If you deposit a fixed amount of money into a savings account every month, the total amount saved can be modeled by an arithmetic series. For example, if you save \$100 every month, after 6 months, the total savings will be:
+\[
+100 + 100 + 100 + 100 + 100 + 100 = 6 \times 100 = \$600
+\]
+
+\textbf{Question:}
+
+13. If you save \$50 every month, how much will you have saved after 8 months?
+
+\subsection*{Population Growth}
+
+If a population of bacteria triples every hour, the number of bacteria can be modeled by a geometric sequence. If you start with 1 bacterium, after 4 hours, the population will be:
+\[
+1, 3, 9, 27, 81
+\]
+
+\textbf{Question:}
+
+14. If a population of bacteria doubles every hour, starting with 2 bacteria, what will be the population after 5 hours?
+
+\end{document}

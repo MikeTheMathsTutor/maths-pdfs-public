@@ -1,0 +1,167 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\title{The Equation of a Circle}\\
+\author{Tutoring Centre Ferndale\\
+\includegraphics[width=4em]{ApS_logo.png}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{What is the Equation of a Circle?}
+
+The equation of a circle is a mathematical expression that describes all the points that are a fixed distance (the radius) from a central point (the center). The standard form of the equation of a circle is derived from the Pythagorean theorem.
+
+\section*{Key Terms}
+
+\begin{itemize}
+    \item \textbf{Circle:} A set of all points in a plane that are a fixed distance (the radius) from a central point (the center).
+    \item \textbf{Center:} The fixed point from which all points on the circle are equidistant, denoted as \( (h, k) \).
+    \item \textbf{Radius:} The fixed distance from the center to any point on the circle, denoted as \( r \).
+\end{itemize}
+
+\section*{Equation of a Circle}
+
+The standard form of the equation of a circle with center at \( (h, k) \) and radius \( r \) is:
+\boldmath{\[
+(x - h)^2 + (y - k)^2 = r^2
+\]}
+
+\section*{The Pythagorean Theorem}
+
+The equation of a circle is derived from the Pythagorean theorem. In a right triangle with legs parallel to the coordinate axes, the hypotenuse is the distance between a point \( (x, y) \) on the circle and the center \( (h, k) \). Thus, the distance formula:
+\[
+r = \sqrt{(x - h)^2 + (y - k)^2}
+\]
+Squaring both sides gives the standard form of the equation of a circle.
+
+\section*{Effects of Each Variable}
+
+\begin{itemize}
+    \item \textbf{Center \((h, k)\):} Changing \( h \) or \( k \) moves the circle horizontally or vertically, respectively.
+    \item \textbf{Radius \( r \):} Changing \( r \) changes the size of the circle. A larger \( r \) makes the circle larger, and a smaller \( r \) makes the circle smaller.
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[width=\textwidth,
+        axis lines = middle,
+        xlabel = {$x$},
+        ylabel = {$y$},
+        ymin=-2, ymax=5.5,
+        xmin=-2, xmax=5.5,
+        domain=-2:6,
+        samples=100,
+        ytick={-1,0,1,2,3,4,5},
+        xtick={-1,0,1,2,3,4,5},
+        grid=both,
+        grid style={line width=.3pt, draw=gray!50}]
+        \addplot [thick, samples=200, domain=-0.5:4.5] {sqrt(2.5^2 - (x-2)^2) + 1};
+        \addplot [thick, samples=200, domain=-0.5:4.5] {-sqrt(2.5^2 - (x-2)^2) + 1};
+        \node at (axis cs:4,4.2) [anchor=east] {\boldmath{$(x-2)^2 + (y-1)^2 = 2\frac{1}{2}^2$}};
+        \addplot [only marks, mark=*] coordinates {(2,1)};
+        \node at (axis cs:2,1) [anchor=east] {(2,1)};
+        \node at (axis cs:2,0.9) [below] {centre};
+        \draw[->, thick] (axis cs:2,1) -- (axis cs:{2+2.5*cos(20)},{1+2.5*sin(20)}) node[midway, above, sloped] {radius $2\frac{1}{2}$};
+        \draw[dashed] (axis cs:2,1) -- (axis cs:{2+2.5*cos(20)},1) -- (axis cs:{2+2.5*cos(20)},{1+2.5*sin(20)});
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+\section*{Examples}
+
+\subsection*{Example 1}
+
+Find the equation of a circle with center at \( (3, -2) \) and radius 5.\\
+
+\textbf{Solution:}
+
+Using the standard form:
+\[
+(x - h)^2 + (y - k)^2 = r^2
+\]
+
+Substitute \( h = 3 \), \( k = -2 \), and \( r = 5 \):
+\[
+(x - 3)^2 + (y + 2)^2 = 5^2
+\]
+
+Simplify:
+\[
+(x - 3)^2 + (y + 2)^2 = 25
+\]
+
+\textbf{Equation of the circle:} \( (x - 3)^2 + (y + 2)^2 = 25 \)
+
+\subsection*{Example 2}
+
+Find the center and radius of the circle given by the equation \( (x + 1)^2 + (y - 4)^2 = 16 \).\\
+
+\textbf{Solution:}
+
+Compare with the standard form:
+\[
+(x - h)^2 + (y - k)^2 = r^2
+\]
+
+We have:
+\[
+(x - (-1))^2 + (y - 4)^2 = 4^2
+\]
+
+Thus, the center is \( (-1, 4) \) and the radius is 4.\\
+
+\textbf{Center:} \( (-1, 4) \)
+
+\textbf{Radius:} 4
+
+\newpage
+
+\section*{Practice Problems}
+
+Solve the following problems related to the equation of a circle:
+
+\subsection*{Problem 1}
+
+Find the equation of a circle with center at \( (2, 3) \) and radius 7.\\
+
+\textbf{Solution:}
+
+Using the standard form:
+\[
+(x - 2)^2 + (y - 3)^2 = 7^2
+\]
+\[
+(x - 2)^2 + (y - 3)^2 = 49
+\]\\
+
+\textbf{Equation of the circle:} \( (x - 2)^2 + (y - 3)^2 = 49 \)
+
+\subsection*{Problem 2}
+
+Find the center and radius of the circle given by the equation \( x^2 + y^2 = 9 \).\\
+
+\textbf{Solution:}
+
+Compare with the standard form:
+\[
+(x - 0)^2 + (y - 0)^2 = 3^2
+\]
+
+Thus, the center is \( (0, 0) \) and the radius is 3.\\
+
+\textbf{Center:} \( (0, 0) \)
+
+\textbf{Radius:} 3
+
+\section*{Conclusion}
+
+The equation of a circle is a crucial concept in geometry that helps us understand the properties and relationships of circles. By learning how to derive and manipulate this equation, students can solve a variety of geometric problems and deepen their understanding of mathematical relationships. Practice with these problems to strengthen your understanding of the equation of a circle and its applications!
+
+\end{document}

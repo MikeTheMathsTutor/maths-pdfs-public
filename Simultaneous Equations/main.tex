@@ -1,0 +1,219 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\geometry{a4paper, margin=1in}
+
+\title{Simultaneous Equations}\\
+\author{Tutoring Centre Ferndale\\
+\includegraphics[width=4em]{ApS_logo.png}}
+\date{}
+
+\begin{document}
+\maketitle
+
+Simultaneous equations are a set of equations that are solved together. The solution is the set of values that satisfy all equations simultaneously.\\
+
+When two equations that represent two lines are graphed, for example, the solution to the simultaneous equations is the point where these two lines intersect. This point gives the values of the variables that make both equations true at the same time.\\
+
+This same principle can be used with sets of any sorts of equations where the curves of their lines intersect. Sets of equations with more than two variables can be graphed as plane and their solution will be the line of intersection of the planes.
+
+\section*{Adding or Subtracting Equations}
+When solving simultaneous equations, you can add or subtract one equation from another to eliminate one of the variables. This works because of a basic property of equality: if two things are equal, then adding or subtracting the same amount from both will keep them equal.\\
+
+For example, if you have:
+\[
+\begin{cases}
+x + y = 7 \\
+x - y = 3
+\end{cases}
+\]
+
+You can add the two equations together to eliminate \( y \):
+\[
+(x + y) + (x - y) = 7 + 3
+\]
+
+This simplifies to:
+\[
+2x = 10 \implies x = 5
+\]
+
+Now that you know \( x \), you can substitute it back into one of the original equations to find \( y \).\\
+
+This method works because adding or subtracting the same values (the equations) maintains the balance, allowing us to isolate and solve for one variable at a time.
+
+\section*{Multiplying or Dividing Equations}
+Sometimes, the coefficients of the variables in the equations are not suitable for direct addition or subtraction. In such cases, you can multiply or divide one or both equations by a number to make the coefficients of one of the variables match.\\
+
+For example, if you have:
+\[
+\begin{cases}
+2x + 3y = 8 \\
+3x + 2y = 7
+\end{cases}
+\]
+
+You can multiply the first equation by 3 and the second equation by 2 to match the coefficients of \( x \):
+\[
+\begin{cases}
+3(2x + 3y) = 3(8) \\
+2(3x + 2y) = 2(7)
+\end{cases}
+\]
+
+This simplifies to:
+\[
+\begin{cases}
+6x + 9y = 24 \\
+6x + 4y = 14
+\end{cases}
+\]
+
+Now, you can subtract the second equation from the first to eliminate \( x \):
+\[
+(6x + 9y) - (6x + 4y) = 24 - 14
+\]
+
+This simplifies to:
+\[
+5y = 10 \implies y = 2
+\]
+
+Now that you know \( y \), you can substitute it back into one of the original equations to find \( x \):
+\[
+2x + 3(2) = 8 \implies 2x + 6 = 8 \implies 2x = 2 \implies x = 1
+\]
+
+This method works because multiplying both sides of an equation by the same number maintains the equality, allowing us to manipulate the equations to make solving for the variables easier.
+
+\newpage
+
+\section*{Methods for Solving Simultaneous Equations}
+There are several methods to solve simultaneous equations:
+
+\subsection*{Substitution Method}
+
+\begin{enumerate}
+\item Solve one equation for one variable.
+\item Substitute this expression into the other equation.
+\item Solve the resulting single-variable equation.
+\item Substitute back to find the other variable.
+\end{enumerate}
+
+\subsubsection*{Example}
+Solve the following system:
+\[
+\begin{cases}
+x + y = 7 \\
+2x - y = 3
+\end{cases}
+\]
+\begin{itemize}
+    \item Solve the first equation for \( y \): \( y = 7 - x \).
+    \item Substitute into the second equation: \( 2x - (7 - x) = 3 \).
+    \item Simplify and solve: \( 3x - 7 = 3 \Rightarrow 3x = 10 \Rightarrow x = \frac{10}{3} \).
+    \item Substitute \( x \) back into \( y = 7 - x \): \( y = 7 - \frac{10}{3} = \frac{11}{3} \).
+    \item Solution: \( \left( \frac{10}{3}, \frac{11}{3} \right) \).
+\end{itemize}
+
+\newpage
+
+\subsection*{Elimination Method}
+\begin{enumerate}
+\item Multiply equations to align coefficients of one variable.
+\item Add or subtract equations to eliminate that variable.
+\item Solve the resulting single-variable equation.
+\item Substitute back to find the other variable.
+\end{enumerate}
+
+\subsubsection*{Example}
+Solve the following system:
+\[
+\begin{cases}
+3x + 2y = 16 \\
+4x - 3y = 2
+\end{cases}
+\]
+\begin{itemize}
+    \item Multiply the first equation by 3 and the second by 2: 
+    \[
+    \begin{cases}
+    9x + 6y = 48 \\
+    8x - 6y = 4
+    \end{cases}
+    \]
+    \item Add the equations: $ 17x = 52 \Rightarrow x = \frac{52}{17} = 3\frac{1}{17}.$
+    \item Substitute \( x \) back into \( 3x + 2y = 16 \): 
+    \[
+    3(\frac{52}{17}) + 2y = 16 \Rightarrow
+    \frac{156}{17} + 2y = 16 \Rightarrow
+    2y = 16 - \frac{156}{17} = \frac{116}{17} \Rightarrow
+    y = \frac{(\frac{116}{17})}{2}=\frac{232}{17}=13\frac{11}{17}.
+    \]
+    \item Solution: \( (3\frac{1}{17}, 13\frac{11}{17}) \).
+\end{itemize}
+
+\newpage
+
+\section*{Practical Examples}
+Simultaneous equations are used in various fields such as economics, engineering, and science to model and solve real-world problems.
+
+\subsection*{Example: Supply and Demand}
+Consider the following supply and demand equations:
+\[
+\begin{cases}
+S = 3P + 10 \\
+D = 50 - 2P
+\end{cases}
+\]\\
+where \( S \) is the supply, \( D \) is the demand, and \( P \) is the price.
+
+Find the equilibrium price and quantity (the price and quantity at which supply equals demand):
+\begin{itemize}
+    \item At equilibrium, supply equals demand: \( 3P + 10 = 50 - 2P \).
+    \item Solve for \( P \): \( 5P = 40 \Rightarrow P = 8 \).
+    \item Substitute \( P \) back into \( S \): \( S = 3(8) + 10 = 34 \).
+    \item Solution: The equilibrium price is 8, and the equilibrium quantity is 34.
+\end{itemize}
+
+\newpage
+
+\section*{Exercises}
+Solve the following systems of equations:
+
+\subsection*{Exercise 1}
+\[
+\begin{cases}
+2x + y = 5 \\
+3x - y = 4
+\end{cases}
+\]
+
+\subsection*{Exercise 2}
+\[
+\begin{cases}
+x - 2y = 1 \\
+2x + 3y = 12
+\end{cases}
+\]
+
+\section*{Answers}\\
+\subsection*{Exercise 1}
+\begin{itemize}
+    \item Add the equations: \( (2x + y) + (3x - y) = 5 + 4 \Rightarrow 5x = 9 \Rightarrow x = \frac{9}{5} = 1.8 \).
+    \item Substitute \( x \) back into \( 2x + y = 5 \): \( 2(1.8) + y = 5 \Rightarrow 3.6 + y = 5 \Rightarrow y = 1.4 \).
+    \item Solution: \( (1.8, 1.4) \).
+\end{itemize}
+
+\subsection*{Exercise 2}
+\begin{itemize}
+    \item Solve the first equation for \( x \): \( x = 1 + 2y \).
+    \item Substitute into the second equation: \( 2(1 + 2y) + 3y = 12 \Rightarrow 2 + 4y + 3y = 12 \Rightarrow 7y = 10 \Rightarrow y = \frac{10}{7} \).
+    \item Substitute \( y \) back into \( x = 1 + 2y \): \( x = 1 + 2\left(\frac{10}{7}\right) = 1 + \frac{20}{7} = \frac{27}{7} \).
+    \item Solution: \( \left( \frac{27}{7}, \frac{10}{7} \right) \).
+\end{itemize}
+
+\end{document}
