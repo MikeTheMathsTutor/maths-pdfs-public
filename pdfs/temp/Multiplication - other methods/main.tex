@@ -1,0 +1,381 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{shapes.geometry}
+\usepackage{setspace}
+\usepackage[fontsize=16pt]{fontsize}
+
+\title{Multiplication - other methods}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+\section*{Multiplying Numbers\\that Differ by 2}
+
+$$n \times (n+2) = (n+1)^2-1$$
+
+$$7 \times 9 = 8^2-1=63$$
+$$19 \times21= 20^2-1=399$
+$$99\times101=100^2-1=9,999$$
+
+\section*{Sum of Differences\\
+and Product of Differences}
+
+$$97 \times 96 = 9,312 :$$
+
+\begin{tikzpicture} 
+\path ( 0, 0) node (a1) {$97$};
+\path ( 2, 0) node (b1) {$\times$};
+\path ( 4, 0) node (c1) {$96$};
+\path ( 6, 0) node (d1) {$=$};
+\path ( 8, 0) node (e1) {$93$};
+\path ( 10, 0) node (f1) {$12$};
+\path ( 0, -1) node (a2) {$\overbrace{100-97}$};
+\path ( 4, -1) node (c2) {$\overbrace{100-96}$};
+\path ( 8, -1) node (e2) {$\overbrace{100-7}$};
+\path ( 0, -2.5) node (a3) {$3$};
+\path ( 2, -2.5) node (b3) {$+$};
+\path ( 4, -2.5) node (c3) {$4$};
+\path ( 8, -2.5) node (e3) {$7$};
+\path ( 2, -3.7) node (b5) {$\times$};
+\path ( 10, -3.5) node (f5) {};
+\draw [->] (a2) -- (a3);
+\draw [->] (c2) -- (c3);
+\draw [->] (e3) -- (e2);
+\draw [->] (c3) -- (e3);
+\draw (a3) -- (0,-3.1) -- (4,-3.1) -- (c3);
+\draw [->] (b5) -- (10,-3.7) -- (f1);
+\end{tikzpicture}
+
+\pagebreak
+
+\section*{Approximation Method}
+\begin{itemize}
+\item Approximate each factor\\to the nearest multiple of 10 or 100.
+\item These must be multiples of each other.\\Note the multiple.
+\item Note under each factor the difference between it and its approximation.
+\item Note under the smaller factor the product of its difference and the multiplier.
+\item Add the other factor.
+\item Multiply by the approximation of this factor.
+\item Add the product of the differences.
+\end{itemize}
+
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}r}
+        & &2&0&            &8&0&${(\times 4)$&            (approximations)\\
+        & &1&8&\ $\times\ $&7&7& &                               (factors)\\
+        & &-&2&            &-&3& &                           (differences)\\
+        & &-&8&            & & & &          (difference$\times$\ multiple)\\
+        &+&7&7&            & & & &                        (+ other factor)\\ \cline{2-4}
+        & &6&9&            & & & &\\
+ &$\times$&2&0&            & & & &                ($\times$ approximation)\\ \cline{1-4}
+       1&3&8&0&            & & & &\\
+        & &+&6&            & & & &              (+ product of differences)\\ \cline{1-4}
+       1&3&8&6&            & & & &\\ \cline{1-4}
+\end{tabular}
+
+\section*{Base Method}
+
+\begin{itemize}
+\item Select some multiple of a power of 10 that is near both factors.
+\item Subtract this base number from each factor and note the differences.
+\item To one factor, add the difference of the other factor minus the base number.
+\item Multiply that by the base number.
+\item Add the product of the differences.
+\end{itemize}
+
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}}
+        &1&4&$\times$&1&2\ = \ &1&6&8\\
+        & & &\ 10\   & &       & & &\\
+        & &+4&       &+2&      & & &\\\\
+        & 1&4&&&&&&\\
+        & +&2&&&&&&\\\cline{2-3}
+        & 1&6&&&&&&\\
+        $\times$&1&0&&&&&&\\\cline{2-4}
+        & 1&6&0&&&&&\\
+        +&4&$\times$&2&&&&&\\\cline{2-4}
+        & 1&6&8&&&&&\\\cline{2-4}
+\end{tabular}
+
+\pagebreak
+
+\section*{Stick Multiplication}
+
+Draw sets of parallel lines representing the first factor, crossed by sets of parallel lines representing the second factor, and count the intersections.\\
+
+\begin{tikzpicture}
+\path (3.0,-1.7) node[circle,draw] (43) {43};
+\draw[fill] (4.0, 0.0) -- (11, -3.0);
+\draw[fill] (3.8,-0.5) -- (10.8,-3.5);
+\draw[fill] (3.6,-1.0) -- (10.6,-4.0);
+\path (3.1,-0.4) node (43ones) {ones};
+\draw[fill] (3.0,-2.5) -- (10.0,-5.5);
+\draw[fill] (2.8,-3.0) -- (9.8,-6.0);
+\draw[fill] (2.6,-3.5) -- (9.6,-6.5);
+\draw[fill] (2.4,-4.0) -- (9.4,-7.0);
+\path (2.0,-3.2) node (43tens) {tens};
+\path (9.3,-1.0) node[circle,draw] (22) {22};
+\draw[fill] (2.0,-6.0) -- (8.0, 0.0);
+\draw[fill] (2.5,-6.4) -- (8.5,-0.4);
+\path (8.8,-0.0) node (22tens) {tens};
+\draw[fill] (5.0,-7.0) -- (10.0,-1.6);
+\draw[fill] (5.5,-7.4) -- (10.5,-2.0);
+\path (10.7,-1.7) node (22ones) {ones};
+\path (6.9,-3.3) node[scale=0.8] (14tens) {14};
+\draw[rotate=15] (5.6,-5.1) ellipse (125pt and 26pt);
+\path (7.0,-6.4) node[scale=0.8] (8hundreds) {8};
+\draw[rotate=35] (3.1,-8.4) ellipse (42pt and 18pt);
+\path (6.7,-0.7) node[scale=0.8] (6ones) {6};
+\draw[rotate=26] (5.2,-4.5) ellipse (36pt and 16pt);
+\end{tikzpicture}
+
+Here we see there are 8 hundreds, a total of 14 tens, and 6 ones, so:\\
+
+$43 \times 22 = $\\
+
+\begin{tabular}{c@{\,}c@{\,}c}
+8&0&0\\
+1&4&0\\
++& &6 \\ \hline
+9&4&6 \hline
+\end{tabular}
+
+\section*{Finger Multiplication}
+
+\subsection*{Multiplying two numbers,\\each from 6 to 10}
+
+\begin{itemize}
+\item Hold your hands palms down. Number the fingers and thumb of the left hand from 10 to 6, and the thumb and fingers of the right hand from 6 to 10.
+\item Bend the fingers or thumbs corresponding to each number, and the fingers or thumbs between those two fingers.
+\item The number of bent fingers or thumbs gives the tens digit.
+\item Add the product of the unbent fingers or thumbs on each hand.
+\end{itemize}
+
+\pagebreak
+
+\subsection*{Multiplying 9 by a number\\from 1 to 10}
+
+\begin{itemize}
+\item Number the fingers and thumbs from 1 to 10 from left to right.
+\item Bend the finger or thumb corresponding to the number.
+\item The number of fingers or thumb to the left of the bend gives the tens digit.
+\item The number of fingers or thumb to the right of the bend gives the units digit.
+\end{itemize}
+
+\pagebreak
+
+\section*{Box Multiplication}
+Multiplication of large numbers can be done by breaking the factors down and displaying them in a grid that makes it easy to see the partial products that are needed.\\
+
+\noindent
+$123\times45 =$\\\\
+\noindent
+\begin{tikzpicture}
+\node at (3.5,0.5) {100};
+\node at (6.5,0.5) {+ 20};
+\node at (9.5,0.5) {+ 3}; % multiplicand
+\node at (1,-0.7) {\ 40};
+\node at (1,-2.2) {+ 5}; % multiplier
+\draw (2,0) -| (11,-3);
+\draw (2,0) |- (11,-3);
+\draw (2,-1.5) -- (11,-1.5);
+\draw (5,0) -- (5,-3);
+\draw (8,0) -- (8,-3); % box & gridlines
+\node at (3.5,-0.7) {4000};
+\node at (3.5,-2.2) {500};
+\node at (6.5,-0.7) {800};
+\node at (9.5,-0.7) {120};
+\node at (3.5,-2.2) {500};
+\node at (6.5,-2.2) {100};
+\node at (9.5,-2.2) {15};
+\end{tikzpicture}
+\\
+
+\begin{center}
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c}
+^{1}&4&0&0&0\\
+	& &8&0&0\\
+  + & &1&2&0\\
+    & &5&0&0\\
+    & &1&0&0\\
+  + & & &1&5\\
+  	\hline
+	&5,&5&3&5\\
+	\hline
+	\hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\section*{\=Urdhva Biryag Bhy\=am\\
+(upwards-sideways) Method}
+
+This method is from the Vedas which are ancient writings from India. It is also known as cross or vertical multiplication. Each partial product is written from left to right with tens carried to the last units digit. Here is an example showing the order of multiplications.\\
+
+\noindent
+\begin{minipage}{.5\textwidth}
+\begin{tikzpicture}
+\path (1,1) node {5};
+\path (2,1) node {4};
+\path (3,1) node {3};
+\path (4,1) node {2};
+\path (0,-0.7) node {$\times$};
+\path (1,-0.7) node {3};
+\path (2,-0.7) node {1};
+\path (3,-0.7) node {2};
+\path (4,-0.7) node {4};
+\draw [->] (1,-0.2) -- (1,0.5);
+\draw (0.5,-1.2) -- (4.5,-1.2);
+\path (1,-1.6) node [align=left] {15};
+\end{tikzpicture}
+$$3\times5=15$$
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{tikzpicture}
+\path (1,1) node {5};
+\path (2,1) node {4};
+\path (3,1) node {3};
+\path (4,1) node {2};
+\path (0,-0.7) node {$\times$};
+\path (1,-0.7) node {3};
+\path (2,-0.7) node {1};
+\path (3,-0.7) node {2};
+\path (4,-0.7) node {4};
+\draw [->] (1,-0.2) -- (2,0.5);
+\draw [->] (2,-0.2) -- (1,0.5);
+\draw (0.5,-1.2) -- (4.5,-1.2);
+\path (1.3,-1.6) node [align=left] {$15^{1}7$};
+\end{tikzpicture}
+$$3\times4+1\times5=17$$
+\end{minipage}
+
+\vspace{32pt}
+\noindent
+\begin{minipage}{.5\textwidth}
+\begin{tikzpicture}
+\path (1,1) node {5};
+\path (2,1) node {4};
+\path (3,1) node {3};
+\path (4,1) node {2};
+\path (0,-0.7) node {$\times$};
+\path (1,-0.7) node {3};
+\path (2,-0.7) node {1};
+\path (3,-0.7) node {2};
+\path (4,-0.7) node {4};
+\draw [->] (1,-0.3) -- (3,0.5);
+\draw [->] (3,-0.3) -- (1,0.5);
+\draw [->] (2,-0.3) -- (2,0.5);
+\draw (0.5,-1.2) -- (4.5,-1.2);
+\path (1.6,-1.6) node {$15^{1}7^{2}3$};
+\end{tikzpicture}
+$$3\times3+2\times5+1\times4=23$$
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{tikzpicture}
+\path (1,1) node {5};
+\path (2,1) node {4};
+\path (3,1) node {3};
+\path (4,1) node {2};
+\path (0,-0.7) node {$\times$};
+\path (1,-0.7) node {3};
+\path (2,-0.7) node {1};
+\path (3,-0.7) node {2};
+\path (4,-0.7) node {4};
+\draw [->] (1,-0.3) -- (4,0.5);
+\draw [->] (2,-0.3) -- (3,0.5);
+\draw [->] (3,-0.3) -- (2,0.5);
+\draw [->] (4,-0.3) -- (1,0.5);
+\draw (0.5,-1.2) -- (4.5,-1.2);
+\path (1.9,-1.6) node {$15^{1}7^{2}3^{3}7$};
+\path (3, -2.6) node {$3\times2+1\times3$};
+\path (3.5, -3.3) node {$+\ 2\times4+4\times5=37$};
+\end{tikzpicture}
+\end{minipage}
+
+\vspace{32pt}
+
+\noindent
+\begin{minipage}{.5\textwidth}
+\begin{tikzpicture}
+\path (1,1) node {5};
+\path (2,1) node {4};
+\path (3,1) node {3};
+\path (4,1) node {2};
+\path (0,-0.7) node {$\times$};
+\path (1,-0.7) node {3};
+\path (2,-0.7) node {1};
+\path (3,-0.7) node {2};
+\path (4,-0.7) node {4};
+\draw [->] (2,-0.3) -- (4,0.5);
+\draw [->] (3,-0.3) -- (3,0.5);
+\draw [->] (4,-0.3) -- (2,0.5);
+\draw (0.5,-1.2) -- (4.5,-1.2);
+\path (2.1,-1.6) node {$15^{1}7^{2}3^{3}7^{2}4$};
+\end{tikzpicture}
+$$1\times2+4\times4+2\times3=24$$
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{tikzpicture}
+\path (1,1) node {5};
+\path (2,1) node {4};
+\path (3,1) node {3};
+\path (4,1) node {2};
+\path (0,-0.7) node {$\times$};
+\path (1,-0.7) node {3};
+\path (2,-0.7) node {1};
+\path (3,-0.7) node {2};
+\path (4,-0.7) node {4};
+\draw [->] (3,-0.3) -- (4,0.5);
+\draw [->] (4,-0.3) -- (3,0.5);
+\draw (0.5,-1.2) -- (4.5,-1.2);
+\path (2.3,-1.6) node {$15^{1}7^{2}3^{3}7^{2}4^{1}6$};
+\end{tikzpicture}
+$$2\times2+4\times3=16$$
+\end{minipage}
+
+\vspace{32pt}
+\noindent
+\begin{minipage}{.5\textwidth}
+\begin{tikzpicture}
+\path (1,1) node {5};
+\path (2,1) node {4};
+\path (3,1) node {3};
+\path (4,1) node {2};
+\path (0,-0.7) node {$\times$};
+\path (1,-0.7) node {3};
+\path (2,-0.7) node {1};
+\path (3,-0.7) node {2};
+\path (4,-0.7) node {4};
+\draw [->] (4,-0.3) -- (4,0.5);
+\draw (0.5,-1.2) -- (4.5,-1.2);
+\path (2.3,-1.6) node {$15^{1}7^{2}3^{3}7^{2}4^{1}68$};
+\end{tikzpicture}
+$$4\times2=8$$
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+Adding up the carries:\\
+\begin{tikzpicture}
+\path (1,1) node {5};
+\path (2,1) node {4};
+\path (3,1) node {3};
+\path (4,1) node {2};
+\path (0,-0.7) node {$\times$};
+\path (1,-0.7) node {3};
+\path (2,-0.7) node {1};
+\path (3,-0.7) node {2};
+\path (4,-0.7) node {4};
+\draw (0.5,-1.2) -- (4.5,-1.2);
+\path (2.3,-1.6) node {$15^{1}7^{2}3^{3}7^{2}4^{1}68$};
+\path (2.3,-2.4) node {$=16,969,568$.};
+\draw (0.5,-2.8) -- (4.5,-2.8);
+\draw (0.5,-2.9) -- (4.5,-2.9);
+\end{tikzpicture}
+\end{minipage}
+
+\end{document}

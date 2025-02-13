@@ -1,0 +1,276 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+\title{\textbf{Polynomials}}\\
+\author{Tutoring Centre Ferndale\\
+\includegraphics[width=4em]{ApS_logo.png}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Definitions}
+
+\begin{itemize}
+\item \textbf{Variables:} Symbols that represent numbers. Also called pronumerals. Letters from the end of the alphabet are usually chosen as variables.
+\item \textbf{Expressions:} An expression is a combination of numbers, variables, and operations (addition, subtraction, multiplication, and division) that represents a value.
+
+Expressions can be numerical expressions with only numbers and operations, such as \(3 + 5\) or they can be algebraic expressions which include variables and numbers, such as \(2x + 3\) or \(4x^2 + 3x - 7\).
+
+\item \textbf{Equations:} Expressions do not include an equals sign (=). When you add an equals sign, it becomes an equation. An equation is a statement that two expressions have the same value.
+
+\item \textbf{Formulas:} A formula is an equation that shows the relationship between variables that represent real quantities. They are used to calculate an unknown value from other known values. For example, Area = Length $\times$ Width (or A=L$\cdot$W$.)
+
+\item \textbf{Coefficients:} Numbers in front of variables that multiply them. In \(3x^2\), the coefficient is 3; in \(2x\), the coefficient is 2.
+
+\item \textbf{Constants:} Fixed values in expressions that do not change because of other variables. In $3x+2$, 2 is the constant.
+\end{itemize}
+
+\section*{Polynomials}
+Polynomials are expressions that consist of variables and coefficients and constants, combined using addition, subtraction, and multiplication, but no 
+division by variables. $3x+2y+7$ is a polynomial.
+
+\begin{itemize}
+\item \textbf{Terms:} Terms are the parts of the polynomial that are separated by plus or minus signs. Each term is either a product of a coefficient and a variable raised to a non-negative integer power, or a constant. For example, in the polynomial \(3x^2 + 2x + 1\), the terms are \(3x^2\), \(2x\), and \(1\).
+\end{itemize}
+
+\section*{Types of Polynomials}
+\begin{enumerate}
+\item \textbf{Monomial:} A polynomial with one term.\\Example: \(5x^3\)
+\item \textbf{Binomial:} A polynomial with two terms.\\Example: \(x^2 - 4\)
+\item \textbf{Trinomial:} A polynomial with three terms.\\Example: \(x^2 + 2x + 1\)
+\end{enumerate}
+
+\subsection*{Exercises}
+
+Determine whether each of the following polynomial expressions is a monomial, binomial, or trinomial.
+
+\begin{enumerate}
+    \item $7x^2$
+    \item $4y - 9$
+    \item $3a^2 - 2a + 5$
+    \item $5z^3 + 7z^2$
+    \item $-6b$
+\end{enumerate}
+
+\subsubsection*{Answers}
+
+\begin{enumerate}
+    \item $7x^2$: Monomial
+    \item $4y - 9$: Binomial
+    \item $3a^2 - 2a + 5$: Trinomial
+    \item $5z^3 + 7z^2$: Binomial
+    \item $-6b$: Monomial
+\end{enumerate}
+
+\section*{Simplifying Polynomial Expressions\\by Combining Like Terms}
+
+\textbf{Like terms:} Like terms are terms that have the same variable raised to the same power. For example, in the expression $3x^2 + 5x - 2x^2 + 4$, the terms $3x^2$ and $-2x^2$ are like terms because they both contain $x^2$.\\
+
+Expressions can often be simplified by combining like terms or by performing
+operations. For example, combining like terms by adding them together,
+$2x + 3x$ simplifies to $5x$.\\
+
+Here are the steps to simplify a polynomial expression:
+\begin{enumerate}
+\item Identify like terms.
+\item Combine the coefficients of like terms.
+\item Rewrite the expression with the combined terms.
+\end{enumerate}
+
+\subsection*{Example}
+
+Simplify the expression $2x^2 + 3x - 4 + 5x^2 - x + 7$.
+
+\begin{align*}
+2x^2 + 3x - 4 + 5x^2 - x + 7 & = (2x^2 + 5x^2) + (3x - x) + (-4 + 7) \\
+& = 7x^2 + 2x + 3
+\end{align*}
+
+\subsection*{Exercises}
+
+Simplify these polynomial expressions by combining like terms:
+
+\begin{enumerate}
+    \item $4x^3 + 2x^2 - 5x + 3 - 2x^3 + x^2 + x - 7$
+    \item $6a^2 - 3a + 2 - 4a^2 + 5a - 6$
+    \item $5m^3 + 3m^2 - 2m + 4 - 3m^3 + 2m^2 + m - 1$
+    \item $7y^2 - 4y + 8 + 2y^2 + y - 5$
+    \item $3p^3 + 4p^2 - 6p + 1 - p^3 + 2p^2 + 5p - 2$
+\end{enumerate}
+
+\subsubsection*{Answers}
+
+\begin{enumerate}
+    \item $4x^3 + 2x^2 - 5x + 3 - 2x^3 + x^2 + x - 7$
+    \begin{align*}
+    & = (4x^3 - 2x^3) + (2x^2 + x^2) + (-5x + x) + (3 - 7) \\
+    & = 2x^3 + 3x^2 - 4x - 4
+    \end{align*}
+    
+    \item $6a^2 - 3a + 2 - 4a^2 + 5a - 6$
+    \begin{align*}
+    & = (6a^2 - 4a^2) + (-3a + 5a) + (2 - 6) \\
+    & = 2a^2 + 2a - 4
+    \end{align*}
+    
+    \item $5m^3 + 3m^2 - 2m + 4 - 3m^3 + 2m^2 + m - 1$
+    \begin{align*}
+    & = (5m^3 - 3m^3) + (3m^2 + 2m^2) + (-2m + m) + (4 - 1) \\
+    & = 2m^3 + 5m^2 - m + 3
+    \end{align*}
+    
+    \item $7y^2 - 4y + 8 + 2y^2 + y - 5$
+    \begin{align*}
+    & = (7y^2 + 2y^2) + (-4y + y) + (8 - 5) \\
+    & = 9y^2 - 3y + 3
+    \end{align*}
+    
+    \item $3p^3 + 4p^2 - 6p + 1 - p^3 + 2p^2 + 5p - 2$
+    \begin{align*}
+    & = (3p^3 - p^3) + (4p^2 + 2p^2) + (-6p + 5p) + (1 - 2) \\
+    & = 2p^3 + 6p^2 - p - 1
+    \end{align*}
+\end{enumerate}
+
+\section*{Standard Form of a Polynomial}
+
+In algebra, a polynomial is said to be in \textbf{standard form} when its terms are arranged in descending order of their powers. This means the term with the highest power is written first, followed by the term with the next highest power, and so on, until the constant term is reached (if there is one). Putting polynomials into standard form makes them easier to work with.\\
+
+To write the polynomial \(3x^2 + 7 + 4x^3 - 2x\) in standard form, rearrange the terms in descending order of their powers:
+
+\[
+4x^3 + 3x^2 - 2x + 7
+\]
+
+\begin{itemize}
+    \item \textbf{Leading Coefficient}: The coefficient of the term with the highest degree is called the leading coefficient. In the example above, the leading coefficient is 4.
+    \item \textbf{Constant Term}: The term with no variable is the constant term. In the example above, the constant term is 7.
+\end{itemize}
+
+\subsection*{Exercises}
+
+For each of the following polynomial expressions, identify the variable, coefficients, constant, and leading coefficient.
+
+\begin{enumerate}
+    \item $3x^2 + 5x - 7$
+    \item $-4y^3 + 2y^2 - y + 8$
+    \item $6a^4 - 3a^2 + 7$
+    \item $9z^3 - 5z + 2$
+    \item $-2b^5 + 4b^3 - 3b + 1$
+\end{enumerate}
+
+\subsubsection*{Answers}
+
+\begin{enumerate}
+    \item $3x^2 + 5x - 7$
+    \begin{itemize}
+        \item Variable: $x$
+        \item Coefficients: $3, 5$
+        \item Constant: $-7$
+        \item Leading Coefficient: $3$
+    \end{itemize}
+    
+    \item $-4y^3 + 2y^2 - y + 8$
+    \begin{itemize}
+        \item Variable: $y$
+        \item Coefficients: $-4, 2, -1$
+        \item Constant: $8$
+        \item Leading Coefficient: $-4$
+    \end{itemize}
+    
+    \item $6a^4 - 3a^2 + 7$
+    \begin{itemize}
+        \item Variable: $a$
+        \item Coefficients: $6, -3$
+        \item Constant: $7$
+        \item Leading Coefficient: $6$
+    \end{itemize}
+    
+    \item $9z^3 - 5z + 2$
+    \begin{itemize}
+        \item Variable: $z$
+        \item Coefficients: $9, -5$
+        \item Constant: $2$
+        \item Leading Coefficient: $9$
+    \end{itemize}
+    
+    \item $-2b^5 + 4b^3 - 3b + 1$
+    \begin{itemize}
+        \item Variable: $b$
+        \item Coefficients: $-2, 4, -3$
+        \item Constant: $1$
+        \item Leading Coefficient: $-2$
+    \end{itemize}
+\end{enumerate}
+
+\section*{Degree of a Polynomial}
+The degree of a polynomial is the highest power of the variable in the polynomial. 
+For example:
+
+- In \(4x^3 + 3x^2 + x + 7\), the degree is 3.
+
+- In \(2x^2 + 5x\), the degree is 2.
+
+\begin{itemize}
+\item When polynomials are in equations, this tells you the complexity of the relationship between the variables and helps in identifying the type of equation. 
+\item Also, the degree indicates the maximum number of times the graph of the equation can intersect the x-axis, which corresponds to the number of possible solutions the equation can have.
+\end{itemize}
+
+\begin{enumerate}
+\item \textbf{Linear Equation} (First degree polynomial):\\
+   - The highest power of the variable is 1.\\
+   - Example: \(2x + 3 = 0\)\\
+   - Graphs as a straight line.
+
+\item \textbf{Quadratic Equation} (Second degree polynomial):
+   - The highest power of the variable is 2.
+   - Example: \(x^2 + 3x + 2 = 0\)
+   - Graphs as a parabola.
+
+\item \textbf{Cubic Equation} (Third- degree polynomial):
+   - The highest power of the variable is 3.
+   - Example: \(x^3 - 2x^2 + x - 5 = 0\)
+   - Graphs as a curve that can change direction up to two times.
+
+\item \textbf{Quartic Equation} (Fourth degree polynomial):
+   - The highest power of the variable is 4.
+   - Example: \(x^4 + x^3 - x^2 + x - 1 = 0\)
+   - Graphs can change direction up to three times.
+
+\item \textbf{Quintic Equation} (Fifth degree polynomial):
+   - The highest power of the variable is 5.
+   - Example: \(x^5 - 3x^4 + x^3 - x + 2 = 0\)
+   - Graphs can change direction up to four times.
+\end{enumerate}
+
+\newpage
+
+\subsection*{Exercises}
+
+Rewrite each of the following polynomial expressions in standard form, and indicate the degree of each expression.
+
+\begin{enumerate}
+    \item $5x + 3x^2 - 7$
+    \item $8 - 4y^3 + y - 2y^2$
+    \item $-3a^2 + 6 + a^4$
+    \item $-z + 9z^3 + 2$
+    \item $4b^3 - 3b + 1 - 2b^5$
+\end{enumerate}
+
+\subsubsection*{Answers}
+
+\begin{enumerate}
+\item $5x + 3x^2 - 7 = 3x^2 + 5x - 7$ (second degree)
+\item $8 - 4y^3 + y - 2y^2 = -4y^3 - 2y^2 + y + 8$ (third degree)
+\item $-3a^2 + 6 + a^4 = a^4 - 3a^2 + 6$ (fourth degree)
+\item $-z + 9z^3 + 2 = 9z^3 - z + 2$ (third degree)
+\item $4b^3 - 3b + 1 - 2b^5 = -2b^5 + 4b^3 - 3b + 1$ (fifth degree)
+\end{enumerate}
+
+\end{document}

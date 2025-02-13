@@ -1,0 +1,172 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{enumitem}
+
+\title{Introduction to\\Combinations,\\Permutations\\\& Probability\\Course}\\
+\author{Tutoring Centre Ferndale\\
+\includegraphics[width=4em]{ApS_logo.png}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Permutations}
+
+A permutation is an arrangement of objects in a specific order. The number of permutations of \( n \) distinct objects is given by \( n! \) (n factorial), which is the product of all positive integers up to \( n \).
+
+\[
+n! = n \times (n-1) \times (n-2) \times \ldots \times 2 \times 1
+\]
+
+\subsection*{Example}
+
+How many ways can you arrange the letters \( A, B, \) and \( C \)?
+
+\textbf{Solution:}
+
+The number of permutations is:
+
+$3! = 3 \times 2 \times 1 = 6$
+
+The arrangements are: \( ABC, ACB, BAC, BCA, CAB, CBA \).
+
+\subsection*{Permutations of a Subset}
+
+The number of ways to arrange \( r \) objects from \( n \) distinct objects is given by:
+
+\[P(n, r) = \frac{n!}{(n-r)!}\]
+
+\subsection*{Example}
+
+How many ways can you arrange 2 letters out of \( A, B, C \)?
+
+\textbf{Solution:}
+
+The number of permutations is:
+\[P(3, 2) = \frac{3!}{(3-2)!} = \frac{3!}{1!} = \frac{6}{1} = 6\]
+
+The arrangements are: \( AB, AC, BA, BC, CA, CB \).
+
+\newpage
+
+\section*{Combinations}
+
+A combination is a selection of objects without regard to the order. The number of combinations of \( r \) objects from \( n \) distinct objects is given by:
+\[C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}\]
+$(\binom{n}{r}$\textrm{ is read as "n choose r.")}&
+
+\subsection*{Example}
+
+How many ways can you choose 2 letters from \( A, B, C \)?
+
+\textbf{Solution:}
+
+The number of combinations is:
+\[C(3, 2) = \binom{3}{2} = \frac{3!}{2!(3-2)!} = \frac{3!}{2! \cdot 1!} = \frac{6}{2 \cdot 1} = 3\]
+
+The selections are: \( AB, AC, BC \).
+
+\newpage
+
+\section*{Probability}
+
+Probability is a measure of the likelihood of an event occurring. It is defined as the ratio of the number of favorable outcomes to the total number of possible outcomes.
+
+\[
+P(E) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}}
+\]
+
+\subsection*{Example}
+
+What is the probability of rolling a 3 on a fair six-sided die?
+
+\textbf{Solution:}
+
+The number of favorable outcomes is 1 (rolling a 3), and the total number of possible outcomes is 6 (rolling any number from 1 to 6).
+
+\[P(\text{rolling a 3}) = \frac{1}{6}\]
+
+\subsection*{Probability of Multiple Events}
+
+For independent events, the probability of both events occurring is the product of their individual probabilities.
+
+\[P(A \cap B) = P(A) \times P(B)\]
+
+(The $\cap$ synbol used here means intersection, meaning where two different sets have elements in common.)
+
+\subsection*{Example}
+
+What is the probability of rolling a 3 on a fair six-sided die and then flipping a heads on a fair coin?
+
+\textbf{Solution:}
+
+Probability of rolling a 3 is \( \frac{1}{6} \) and probability of flipping heads is \( \frac{1}{2} \).
+
+\[P(\text{rolling a 3 and flipping heads}) = \frac{1}{6} \times \frac{1}{2} = \frac{1}{12}\]
+
+\section*{Examples}
+
+\subsection*{Example 1: Permutations}
+
+How many ways can 4 people be seated in a row?
+
+\textbf{Solution:}
+
+The number of permutations is:
+\[4! = 4 \times 3 \times 2 \times 1 = 24\]
+
+\subsection*{Example 2: Combinations}
+
+How many ways can you choose 3 out of 5 books to take on a trip?
+
+\textbf{Solution:}
+
+The number of combinations is:
+\[C(5, 3) = \binom{5}{3} = \frac{5!}{3!(5-3)!} = \frac{5!}{3! \cdot 2!} = \frac{120}{6 \cdot 2} = 10\]
+
+\subsection*{Example 3: Probability}
+
+What is the probability of drawing an ace from a standard deck of 52 cards?
+
+\textbf{Solution:}
+
+The number of favorable outcomes is 4 (the 4 aces), and the total number of possible outcomes is 52.
+
+\[P(\text{drawing an ace}) = \frac{4}{52} = \frac{1}{13}\]
+
+\newpage
+
+\section*{Practice}
+
+\subsection*{Problem 1: Permutations}
+
+How many ways can you arrange the letters in the word "MATH"?
+
+\textbf{Solution:}
+
+The number of permutations is:
+\[4! = 24\]
+
+\subsection*{Problem 2: Combinations}
+
+How many ways can you choose 2 cards from a standard deck of 52 cards?
+
+\textbf{Solution:}
+
+The number of combinations is:
+\[C(52, 2) = \binom{52}{2} = \frac{52!}{2!(52-2)!} = \frac{52!}{2! \cdot 50!} = \frac{52 \times 51}{2 \times 1} = 1326\]
+
+\subsection*{Problem 3: Probability}
+
+What is the probability of drawing a red card from a standard deck of 52 cards?
+
+\textbf{Solution:}
+
+The number of favorable outcomes is 26 (the 13 hearts and 13 diamonds), and the total number of possible outcomes is 52.
+
+\[P(\text{drawing a red card}) = \frac{26}{52} = \frac{1}{2}\]
+
+\end{document}

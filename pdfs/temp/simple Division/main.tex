@@ -1,0 +1,349 @@
+\documentclass{article}
+\usepackage{caption}
+\usepackage{cancel}
+\usepackage[fontsize=16pt]{fontsize}
+\usepackage{amsmath}
+\usepackage{polynom}
+\usepackage{longdivision}
+\usepackage{tikz}
+\usepackage[raggedrightboxes]{ragged2e}
+\usepackage{tabularx}
+\author{}
+\date{}
+\title{simple\\Division\\
+\vspace{28pt}
+\begin{center}
+\includegraphics[width=4em]{ApS_logo.png}
+\end{center}
+\begin{normalsize}Tutoring Centre Ferndale\end{normalsize}}
+
+\newcommand\mylongdiv[2]{%
+$\strut#1$\kern.25em\smash{\raise.3ex\hbox{$\big)$}}$\mkern-8mu
+        \overline{\quad\strut#2}$}
+
+\setcounter{secnumdepth}{0}
+\begin{document}
+\maketitle
+\pagebreak
+\tableofcontents
+
+\pagebreak
+
+\section{Division}
+
+Division means breaking a number into equal parts.\\
+
+It is  working out how many parts can be made and how big each part would be.\\
+
+You will also hear about it as how many times some number "goes into" some larger multiple of that number.\\
+
+Division is repeated subtraction, and multiplication is repeated addition, so division is the opposite of multiplication.\\
+
+$12 \div 4 = 3$ means $12 \overbrace{- 4 - 4 - 4}^{\textrm{minus\ 3\ times}} = 0$.\\
+
+$4 \times 3 = 12$ means $0\underbrace{+ 4 + 4 + 4}_{\textrm{add\ 3\ times}} = 12$\\
+
+\vspace{16pt}
+The symbol for division is "$\div$".\\
+
+Division can also be written with a "/" symbol or it can be written as a fraction. $12 \div 4$ means the same as $12/4$ and it means the same as $\frac{12}{4}$.\\
+
+\pagebreak
+
+The number being divided is called the dividend.\\
+
+The number it is being divided by is called the divisor.\\
+
+The result of division is called the quotient.\\
+
+Sometimes a quotient is not a whole number. An amount remaining after division is called the remainder. $13 \div 4 = 3$, with a remainder of 1.\\
+
+The remainder can be written as itself or it is written as a fraction, as in $13 \div 4 = 3 \frac{1}{4}$.
+
+$$\textrm{dividend} \div \textrm{divisor} = \textrm{quotient} + \textrm{remainder}$$
+$$\textrm{or}$$
+$$\textrm{dividend} \div \textrm{divisor} = \textrm{quotient} \frac{\textrm{remainder}}{\textrm{divisor}}$$\\
+
+\pagebreak
+
+\section{Special Rules for Division}
+\vspace{16pt}
+
+Any number divided by 1 is unchanged.\\
+
+$$22 \div 1 = 22$$.
+
+Any number divided by itself equals 1.\\
+
+$$22 \div 22 = 1$$.
+
+A number cannot be divided by 0.\\
+
+$$22 \div 0 = \ ???$$
+
+\pagebreak
+
+\section{Methods of Division}
+\vspace{16pt}
+
+\subsection*{Using the Multiplication Table}
+
+For smaller numbers it is enough to use the multiplication table to look up the answer for a division.\\
+
+If $7 \times 6 = 42$ then it's easy to look up both $42 \div 6 = 7$ and $42 \div 7 = 6$.\\
+
+\pagebreak
+
+\subsection*{Short Division}
+There is a special way of writing division when working with larger numbers. Write the divisor, followed by a right bracket, followed by the dividend with a line over it, and with the quotient written above the line.
+
+Short division is a way of dividing any large number by a single-digit divisor. It is called short division because it is all done on one line.\\
+
+Write the divisor, a right round bracket, and the dividend with a line over it.\\
+
+Start with the left digit of the divisor.\\
+
+If the divisor is less than the dividend, divide that digit by the divisor and write the quotient above that digit.\\
+
+If the divisor is greater than the dividend then include the next digit of the dividend, do that division, and write the quotient above that digit.\\
+
+\pagebreak
+
+\begin{center}
+\mylongdiv{7}{2,296}\\
+\end{center}
+
+In this example, 7 is greater than 2 so include the next digit of the dividend to get 22. $22 \div 7 = 3$ with a remainder of 1. Write the 3 above the 22.
+\begin{center}
+\hspace{3.5ex}3\\
+\mylongdiv{7}{2,296}\\
+\end{center}
+
+Any remainder is written, small, as a tens digit to the left of the next digit of the divisor.
+\begin{center}
+\hspace{3ex}3\\
+\mylongdiv{7}{2,2{^1}96}\\
+\end{center}
+
+\vspace{16pt}
+Do the same for each digit of the dividend, working from left to right, until the final quotient is reached.
+\begin{center}
+\hspace{5.8ex}3\hspace{0.8ex}2\hspace{0.8ex}8\\
+\mylongdiv{7}{2,2{^1}9{^5}6}\\
+\end{center}
+
+\pagebreak
+
+\subsection*{Long Division}
+Long division can divide numbers of any length. It is similar to short division where multiples of the divisor are subtracted from parts of the dividend, working from left to right.\\
+
+ Write the divisor, a right round bracket, and the dividend with a line over it.\\
+ 
+\begin{center}
+\mylongdiv{27}{9,855}\\
+\end{center}
+
+27 won't go into 9 but 27 will go 3 times into 98, with a remainder of 17. Write that as a subtraction, with the 3 written above the 98.
+
+\begin{center}
+\begin{tabular}{cccccccccc}
+ & & & & & &3& & &\\
+\cline{4-9}
+2&7& &)& &9&8&5&5& \\
+ & & & &-&8&1& & & \\\cline{5-7}
+ & & & & &1&7& & & 
+\end{tabular}
+\end{center}
+
+Next "bring down" the next digit of the dividend to get a new partial dividend that can now be subtracted from.
+
+\begin{center}
+\begin{tabular}{cccccccccc}
+ & & & & & &3& & &\\
+\cline{4-9}
+2&7& &)& &9&8&5&5& \\
+ & & & &-&8&1&\downarrow& & \\\cline{5-7}
+ & & & & &1&7&5& & 
+\end{tabular}
+\end{center}
+
+It helps to work out the  multiples of the divisor.\\
+
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+ 1& 2& 3&  4&  5&  6&  7&  8&  9& 10\\
+27&54&81&108&135&162&189&216&243&270
+\end{tabular}\\
+
+ Do the subtraction and write the next digit of the quotient above the line.
+ 
+\begin{center}
+\begin{tabular}{cccccccccc}
+ & & & & & &3&6& & \\
+\cline{4-9}
+2&7& &)& &9&8&5&5& \\
+ & & & &-&8&1& & & \\\cline{5-8}
+ & & & & &1&7&5& & \\
+ & & & &-&1&6&2& & \\\cline{5-8}
+ & & & & & &1&3& & 
+\end{tabular}
+\end{center}
+
+And again, bring down the next digit, subtract the greatest multiple of the divisor that will fit, and write the next digit of the quotient on the line above.
+
+\begin{center}
+\begin{tabular}{cccccccccc}
+ & & & & & &3&6&5& \\
+\cline{4-9}
+2&7& &)& &9&8&5&5& \\
+ & & & &-&8&1& & & \\\cline{5-8}
+ & & & & &1&7&5& & \\
+ & & & &-&1&6&2&\downarrow& \\\cline{5-9}
+ & & & & & &1&3&5& \\
+ & & & & &-&1&3&5& \\\cline{6-9}
+  & & & & & & & &0&
+\end{tabular}
+\end{center}
+
+Now there is no remainder so $9,855 \div 27 = 365$ exactly.
+
+\pagebreak
+
+\section{Remainders}
+Remainders can be expressed just as a remainder, or as a fraction, or as a decimal fraction (a fraction expressed in decimal numbers to the right of the decimal point.)\\
+
+When you reach the last digit of the dividend and there is still a remainder, you get the decimal fraction by adding a decimal point to both the dividend and the quotient, padding the dividend with extra zeroes, and just continuing the procedure.
+
+\begin{center}
+\longdivision{675}{12}
+\end{center}
+
+The quotient here could be written as 56.25, or as $56 \frac{3}{12}$, or as 56 remainder 3.
+
+\newpage
+
+This applies to doing both long division and short division.\\
+
+The decimal fraction part of the quotient will either end with no further remainder, or it will start to repeat itself, or it may continue forever. That is why it can be better to write a remainder as itself, or as a fraction, rather than as a decimal fraction.\\
+
+When a decimal fraction starts to repeat, that is shown by drawing a line above the repeating part of the fraction. You don't have to keep working out a division past that point.\\
+
+\hspace{12ex} 2 \ 3 . $\dot{8}$\\
+\vspace{1pt}
+\hspace{10ex} 9\ \overline{ ) \ 2 \ 1 \ ^{3} 5 \ ^8 0 }
+
+\begin{center}
+\longdivision{571}{99}
+\end{center}
+
+\pagebreak
+
+\section{Testing for Divisibility}
+
+There are some simple tests that can be done first to see if a divisor goes evenly into a dividend, without working out the full division.\\
+
+\subsubsection*{Prime Factors of the Dividend}
+
+One method is to make a prime factor tree of the dividend which will be evenly divisible by any of the prime factors or any product of those prime factors, but not evenly divisible by any other number.\\
+
+For example,\\
+\begin{center}
+\begin{tikzpicture}
+  [level distance=1cm,
+  level 1/.style={sibling distance=2cm},
+  level 2/.style={sibling distance=2cm}]
+  \node {24}
+    child {node {2}}
+    child {node {12}
+      child {node {2}}
+      child {node {6}
+        child {node {2}}
+        child {node {3}}}
+    };
+\end{tikzpicture}
+\end{center}
+
+$24 = 2 \times 2 \times 2 \times 3$, so 24 is only divisible by 1 and 24, by 2, by 3, by $2 \times 2 = 4$, by $2 \times 2 \times 2 = 8$, by $2 \times 2 \times 3 = 12$, and by $2 \times 3 = 6$.\\
+
+\pagebreak
+
+\subsubsection*{Divisibility Rules}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{p{1em}p{\textwidth}}
+
+1.& \RaggedRight{all whole numbers are divisible by 1.}\\
+
+2.& \RaggedRight{is the last digit even?}\\
+
+3.& \RaggedRight{is the sum of its digits divisible by 3?}\\
+
+4.& \RaggedRight{are the last two digits divisible by 4?}\\
+
+   &\RaggedRight{is the ones digit plus two times the tens digit divisible by 4?}\\
+
+   &\RaggedLeft{e.g. $1,036: 6 + 2 \times 3 = 12: 12 = 3 \times 4$ \Checkmark}\\
+
+5.& \RaggedRight{is the last digit 0 or 5?}\\
+
+6.& \RaggedRight{is it divisible by both 2 and 3?}\\
+
+   &\RaggedRight{is it an even number with the sum of its digits being 0, 3 or 6?}\\
+
+7.& \RaggedRight{is 5 times the ones digit plus the rest of the number a multiple of 7?}\\
+
+   &\RaggedLeft{e.g. $18,123: (5 \times 3) + 1,312 = 1827$ \newline
+   $1827: (5 \times 7) + 182 = 217$ \newline
+   $217: (5 \times 7) + 21 = 56 = 5 \times 7$ \Checkmark}\\
+
+8.& \RaggedRight{is the ones digit plus two times the rest of the number divisible by 8?}\\
+
+   &\RaggedLeft{e.g. $4,496: 6 + 2 \times 449 = 904 =\newline 800 + 80 + 24 = 113 \times 8$ \Checkmark}\\
+
+9.& \RaggedRight{is the sum of its digits divisible by 9?}\\
+
+10.& \RaggedRight{is the last digit 0?}\\
+
+11.& \RaggedRight{is the sum of pairs of its digits divisible by 11?}\\
+
+   &\RaggedLeft{e.g. $98,615: 9 + 86 + 15 = 110 = 10 \times 11$ \Checkmark}\\
+
+12.& \RaggedRight{is it divisible by both 3 and 4?}\\
+
+\end{tabular}
+
+\pagebreak
+
+\section{Checking Division}
+
+To check your answers, rearrange the terms into multiplication instead of division.\\
+
+Say you have worked out that $1,131 \div 87 = 13$.\\
+
+Check that by doing $87 \times 13$, which should equal 1,131.\\
+
+If there is a  remainder in your answer, first subtract the remainder from the dividend to make it easily divisible.\\
+
+$12 \div 5 = 2$, with a remainder of 2.\\
+
+$(12 - 2) \times 2 = 10$ means that your answer was correct.\\
+
+\newpage
+\
+
+\begin{center}
+\linespread{2}\large
+
+Enquiries
+
+\textbf{Applied Scholastics Ferndale}
+
+Principal: Paula McLennan
+
+mobile phone: 0431 683 306
+
+email address: apsferndale@gmail.com
+
+website: apsferndale.webs.com
+\end{center}
+
+\end{document}

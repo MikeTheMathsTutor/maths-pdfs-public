@@ -1,0 +1,428 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{xspace}
+\usepackage{verbatim}
+\usepackage{setspace}
+\usepackage{cancel}
+\usepackage[fontsize=16pt]{fontsize}
+
+\author{}
+\date{}
+\title{Logarithms\\
+\vspace{28pt}
+\begin{normalsize}Applied Scholastics, Ferndale WA \end{normalsize}}
+
+\begin{document}
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Logarithms}
+Logarithms were developed in the 1600s by mathematicians John Napier and John Briggs. The word was coined by Napier from the Latin words logos and arithmos and means ‘ratio-number.’\\
+
+The product of two numbers can be found by looking up the logarithm for each number in a table of logarithms, adding the logarithms together, and then looking in the table for the number with that logarithm, known as that number’s antilogarithm.\\
+
+For example, 123 and 234 can be multiplied by looking up their logarithms in a table ($2.09$ and $2.37$), adding them together ($2.09+2.37=4.46$), and looking through the values of the table to find the number that has that logarithm ($\log {28,782}=4.46$, so $123 \times 234=28,782$).\\
+
+This was much faster and simpler than long and error-prone calculations done by earlier methods, particularly for much longer numbers. In the same way, division problems became simpler subtraction problems, and the calculation of powers and roots were also simplified. This was an important problem to solve, and particularly helped in the field of navigation as sailors began to venture further around the world.\\
+
+Logarithms were still commonly used for calculations up until the invention of electronic calculators. They involved either the use of a book of values or the use of a slide rule that was based on a logarithmic scale rather than a linear scale.  Logarithmic scales are still used in measurement of pH, sound, and earthquake intensity, and in other fields.
+
+\subsection*{Definition of a Logarithm}
+A logarithm is the opposite of a power. It is the power to which a base number must be raised to equal a given number. The base is written as a subscript next to the word ‘log.’
+
+\begin{Large}
+\begin{align*}
+number &= base^{exponent}\\
+log_{base} number &= exponent
+\end{align*}
+\end{Large}
+
+For a number $n$ written as a power with\\ a base $b$ and an exponent $e$ such that $n = b^e$,\\ then $log_b n = e$. (Given $b>0$, $b\neq1$, and $n>0$.)
+
+\newpage
+
+For example, for a base of $10$, the log of $100$ is $2$, because $100 = 10^2$.\\
+
+Napier used a base of $e$ for his logarithms. This is ‘Euler’s number,’ roughly equal to 2.7183. It is a constant that often turns up in studies of the natural world and it is used in many branches of mathematics such as in problems involving growth and decay. It was first discovered in solving a problem to do with compound interest. Euler was a famous mathematician and $e$ was named after him. Logarithms with a base of $e$ are called natural logarithms and are written as ln $n$ or log\textsubscript{e} $n$.\\
+
+Briggs later introduced the base of 10 as being easier to work with decimal numbers. Logarithms with a base of 10 are called common logarithms and are written simply as log n without indicating the base. You can assume that the base of a logarithm is 10 unless it is indicated otherwise.
+
+\begin{center}
+e.g.
+\begin{tabular}{ l l }
+$\log{25}=\log_{10}25\approx1.3979$ & $10^{1.3979}\approx25$\\
+$\ln 25=\log_{e}25\approx3.2189$ & $e^{3.2189}\approx25$\\
+\end{tabular}
+\end{center}
+
+\begin{center}
+e.g.
+\begin{tabular}{ l l }
+$16 = 4^2$ & $\log_4{16}=2$\\
+$4 = 8^{\frac{2}{3}}$ & $\log_8{4}=\frac{2}{3}$\\
+$1000 = 10^3$ & $\log{1000}=3$
+\end{tabular}
+\end{center}
+
+\subsection*{Antilogarithms}
+Given the logarithm of an unknown number, how do you find the number?\\
+
+Say $\log{x}\approx0.4771$.\\
+
+The base is not written so it is implied to have a base of 10, so actually its $\log_{10}{x}\approx0.4771$.\\
+
+The definition of a log is that given $n = b^e$ then $\log_b{n}=e$,
+so $\log_{10}{x}\approx0.4771$ becomes $x\approx10^{0.4771}$.
+
+It is the same for a base other than 10, such as $\log_5{x}\approx0.6065$, which becomes $x\approx5^{0.6065}$.
+
+\newpage
+\section{Properties of Logarithms}
+
+\begin{Large}
+$$\log_a{1}=0$$
+\end{Large}
+\begin{center}
+\text{(because }$n^0=0$
+\end{center}
+\begin{align*}
+\text{also: }\ln{1}&=0\\
+\text{and: }\log{1}&=0
+\end{align*}
+
+\begin{Large}
+$$\log_a{a}=1$$
+\end{Large}
+\begin{center}
+\text{(because }$n^1=n$\\
+\end{center}
+
+\begin{align*}
+\text{also: }\ln{e}&=1\\
+\text{and: }\log{10}&=1
+\end{align*}
+
+\begin{Large}
+$$log_a{a^n}=n$$
+\end{Large}
+\begin{align*}
+\text{also: }\ln{e^n}&=n\\
+\text{and: }\log_10{n}&=n
+\end{align*}
+
+\begin{Large}
+$$a^{log_b{n}}=n$$
+\end{Large}
+\begin{align*}
+\text{also: }e^{\ln{x}}&=x\\
+\text{and: }10^{\log{x}}&=x
+\end{align*}
+
+\section{Log Rules}
+
+\subsection*{Product Rule}
+\begin{Large}
+$$\log_b{A}+\log_b{B}=\log_b{AB}$$
+\end{Large}
+
+\begin{center}
+\begin{tabular}{lll}
+\text{proof:}&$\text{let }log_b{A}=x$            & $A = b^x$\\
+             &$\text{let }\log_b{B}=y$           & $B = b^y$\\
+             &                                   &\\
+\text{so }   &$AB=b^x b^y=b^{x+y}$               &\\
+             &$log_b{AB}=x+y=log_b{A}+log_b{B}$  &
+\end{tabular}
+\end{center}
+
+\begin{align*}
+\text{e.g. } \log_2{5}+log_2{4}
+                         &=\log_2{(5\cdot4)}=\log_2{20}\\
+                         &       \\
+\text{e.g. given }\log{2}&=0.3010\\
+\text{ and }      \log{3}&=0.4771\\
+\text{ and }      \log{5}&=0.6990\\
+\text{then }     \log{30}&=\log{(2\cdot3\cdot5)}\\
+                         &=\log{2}+\log{3}+\log{5}=1.4771
+\end{align*}
+
+\newpage
+
+\subsection*{Quotient Rule}
+\begin{Large}
+$$\log_b{A}-\log_b{B}=\log_b\frac{A}{B}$$
+\end{Large}
+
+\begin{center}
+\begin{tabular}{ l l l }
+\text{proof:}&\text{let }$\log_b{A}=x$ & $A = b^x$\\
+             &\text{let }$\log_b{B}=y$ & $B = b^y$\\
+             &                         &          \\
+             &\text{so	}$\frac{A}{B}=\frac{b^x}{b^y}=b^{x-y}$&\\
+             &$\log_b{\frac{A}{B}}=x-y=\log_b{A}-\log_b{B}$&
+\end{tabular}
+\end{center}
+
+\begin{align*}
+\text{e.g. }\log_2{20}+log_2{4}&
+=\log_2{(\frac{20}{4})}=\log_2{5}\\
+\cr
+\text{e.g. given }\log{2}&=0.3010\\
+\text{then }\log{50}&=\log{(\frac{100}{2})}\\
+&=\log{100}-\log{2}
+\text{  }(\log_{10}{100}=2)\\
+&=2-0.3010=1.699
+\end{align*}
+
+\newpage
+
+\subsection*{Power Rule}
+\begin{Large}
+$$log_a{x^n}=n\log_a{x}$$
+\end{Large}
+
+\begin{center}
+\begin{tabular}{ l l l l }
+\text{proof:}&\text{let }$m=\log_a{x}=x$         & $x = a^m$\\
+             &\text{so	}$x^n=({a^m})^n=a^{mn}$ &\\
+             & $\log{x^n}=mn=nm=n\log_a{x}$      &
+\end{tabular}
+\end{center}
+
+\begin{align*}
+\text{e.g. }\log{x^4}              &=4\log{x}\\
+                                   &\\
+\text{e.g. }\log_3{\frac{1}{3}}    &=log_3{1}-log_3{3}\\
+                                   &=0-1=-1\\
+                                   &\text{(}\log_a{1}=0\text{ and }\log_a{a}=1\text{)}\\
+                                   &\\
+\text{e.g. }\log{\sqrt{10}}        &=\log10^{\frac{1}{2}}\\
+                                   &=\frac{1}{2}\log{10}\\
+                                   &=\frac{1}{2}\cdot1=\frac{1}{2}
+\end{align*}
+
+\newpage
+
+\subsection*{Root Rule}
+\begin{Large}
+$$\log_a{(\sqrt[n]{x})}=\frac{\log_a{x}}{n}$$
+\end{Large}
+\\
+
+\begin{align*}
+\text{e.g.}
+\log_2{\sqrt{8}}&=\frac{\log_2{8}}{2}=\frac{3}{2}\\
+\\
+\text{e.g.}
+\log_3{\sqrt{9}}&=\frac{\log_3{9}}{2}=\frac{2}{2}=1
+\end{align*}
+
+\newpage
+
+\subsection*{Change of Base Law}
+
+It is unusual to have to find a log for a number with a base other than 10 or $e$, but there is a formula that can be used:
+
+\begin{Large}
+$$\log_a{n}=\frac{\log_b{n}}{\log_b{a}}$$
+\end{Large}
+
+\begin{align*}
+
+\text{for base 10}
+\log_a{n}&=\frac{\log_{10}{n}}{\log_{10}{a}}=\frac{\log{n}}{\log{a}}\\
+
+\text{for base e}
+\log_a{n}&=\frac{\log_{e}{n}}{\log_{e}{a}}=\frac{\log{n}}{\log{a}}
+\end{align*}
+
+\onehalfspacing
+
+\begin{center}
+\begin{tabular}{llll}
+proof: & $\log_a{n}                 &= mn = a^m$      & (by definition)\\
+       &$\log_b{n}                  &= \log_b{a^m}$  & (taking log of both sides)\\
+       &$\log_b{n}                  &= m \log_b{a}$   & (using power rule)\\
+       &$\frac{\log_b{n}}{\log_b{a}}&= m = \log_a{n}$& (rearranging)
+\end{tabular}
+\end{center}
+
+\singlespacing
+
+\newpage
+
+\begin{center}
+\begin{equation*}
+\begin{split}
+\text{e.g. }\log_4{40}        &=\frac{\log{40}}{\log{4}}\\
+                              &=\frac{16.0206}{0.60206}=2.661\\\\
+\text{e.g. }\log_2{5}+log_3{7}&=(\frac{\log{5}}{\log{2}})+(\frac{\log{7}}{\log{3}})\\
+                              &=4.0932\\\\
+\text{e.g. }\log{x}+3\log{y}-4\log{z}&=\log{x}+\log{y^3}-\log{z^4}\\
+                              &=\log\frac{x{y^3}}{z^4}\\\\
+\text{e.g. }2+4\log_3{x}      &=\log_3{9}+\log_3{x^4}\\
+                              &=log_3{9x^4}\\
+&\text{(express 2 as a log with base 3: }\\
+&$2 = 2\log_3{3}=\log_3{3^2}=\log_3{9})$
+\end{split}
+\end{equation*}
+\end{center}
+
+\newpage
+
+\section{Logarithmic Equations}
+
+\subsection*{Using the Definition of a Logarithm}
+
+\onehalfspacing
+\begin{center}
+\begin{tabular}{llll}
+\text{e.g. }&$\log_10{x}=2$ & $\longrightarrow x=10^2$ & $\longrightarrow x=100$\\
+\text{e.g. }&$\log_x{25}=2$ & $\longrightarrow25=x^2$ & $\longrightarrow x=\pm5=5$\\
+\text{e.g. }&$\log_x{22}=2.1$ & $\longrightarrow22=x^{2.1}$ & $\longrightarrow x=\sqrt[2.1]{22}=4.358$\\
+\text{e.g. }&$\log_4{5}=x$ & $\longrightarrow\frac{\log{5}}{\log{4}}=1.161$\\
+\end{tabular}
+\end{center}
+\singlespacing
+
+\subsection*{Using Equivalence}
+(equivalence: if $log_b{x}=log_b{y}$ then $x=y$.)
+\begin{align*}
+\text{e.g. }\log{x}+\log{5}&=\log{20}\\
+\log{5x}&=\log{20}\text{ (product rule)}\\
+5x&=20\\
+x&=4
+\end{align*}
+
+\newpage
+
+\subsection*{Grouping Log Terms to one side}
+
+(Rearranging to get log terms on on side\\ and numbers on the other)
+\begin{align*}
+\text{e.g. }\log_4{(2x+4)}-2&=\log_4{3}\\
+\log_4{(2x+4)}-\log_4{3}&=2\\
+\log_4{\frac{2x+4}{3}}&=2\\
+\frac{2x+4}{3}&=4^2\\
+\frac{2x+4}{3}&=16\\
+2x+4&=48\\
+2x&=44\\
+x&=22
+\end{align*}
+
+\subsection*{Replacing a Number\\ with the Equivalent Log}
+\begin{align*}
+\text{e.g. }\log_4{(2x+4)}-2&=\log_4{3}\\
+\log_4{(2x+4)}-\log_4{16}&=\log_4{3}\\
+\log_4{(2x+4)}-\log_4{4^2}&=\log_4{3}\\
+\log_4\frac{2x+4}{16}&=log_4{3}\\
+\frac{2x+4}{16}&=3\\
+2x+4&=48\\
+2x&=44\\
+x&=22
+\end{align*}
+
+\newpage
+
+\section{Exponential Equations}
+
+Exponential equations deal with rates of growth and decay. They were first used in calculating compound interest and in population growth. They have many uses. Logarithms provide a method to solve exponential equations that would be difficult or impractical to solve algebraically.\\
+
+Here is an example from the field of finance:\\
+
+How long will it take investor who deposits \$20,000 compounding at 5 \% p.a. to increase this amount to \$30,000?
+
+Compound Interest Formula:		$A=P(1+i)^n$
+\begin{align*}
+30,000&=20,000(1.05)^n\\
+\frac{30,000}{20,000}&=1.05^n\\
+1.5&=1.05^n\\
+\log{1.5}&=\log{1.05^n}\\
+\log{1.5}&=n\log{1.05}\\
+\frac{\log{1.5}}{\log{1.05}}&=n\\
+8.31&=n\\
+\text{check: }1.05^{8.31}&=1.5
+\end{align*}
+
+Hewre is an example from the field of physics involving radioactive decay. The decay of a radioactive substance over time can be modeled using the exponential decay equation:
+
+\begin{equation}
+N(t) = N_0 \times e^{-\lambda t}
+\end{equation}
+
+Where:
+\begin{align*}
+N(t) & : \text{Remaining quantity of radioactive substance at time } t \\
+N_0 & : \text{Initial quantity of radioactive substance} \\
+\lambda & : \text{Decay constant} \\
+t & : \text{Time elapsed}
+\end{align*}
+
+Suppose we have an initial quantity of a radioactive substance, and we want to find the time it takes for the substance to decay to a certain fraction of its initial amount. Let's say we want to find the time when the remaining quantity is $\frac{N_0}{2}$.
+
+Using equation (1), we have:
+\[
+\frac{N_0}{2} = N_0 \times e^{-\lambda t}
+\]
+
+\newpage
+
+Dividing both sides by $N_0$ and taking the natural logarithm (base $e$) of both sides:
+
+\begin{align*}
+\ln{\left(\frac{N_0}{2}\right)} &= \ln{(N_0 \times e^{-\lambda t})} \\
+\ln{\left(\frac{1}{2}\right)} &= \ln{(e^{-\lambda t})} \\
+\ln{\left(\frac{1}{2}\right)} &= -\lambda t \ln{e} \\
+\ln{\left(\frac{1}{2}\right)} &= -\lambda t \\
+t &= -\frac{\ln{\left(\frac{1}{2}\right)}}{\lambda}
+\end{align*}
+
+This formula allows us to calculate the time it takes for the radioactive substance to decay to half of its initial amount.
+
+\newpage
+\
+\newpage
+\
+\newpage
+\
+\newpage
+\
+\newpage
+\
+\newpage
+\
+\newpage
+\
+\newpage
+\
+\newpage
+\
+\newpage
+\
+\newpage
+\
+\newpage
+\
+\newpage
+\
+
+\begin{center}
+\linespread{2}\large
+
+Enquiries
+
+\textbf{Applied Scholastics Ferndale}
+
+Principal: Paula McLennan
+
+mobile phone: 0431 683 306
+
+email address: apsferndale@gmail.com
+
+website: apsferndale.webs.com
+\end{center}
+
+\end{document}
